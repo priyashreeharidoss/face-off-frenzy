@@ -1,0 +1,138 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position:relative;
+}
+#background-video {
+    
+    position: fixed;
+    
+    right: 0;
+    
+    bottom: 0;
+    
+    min-width: 100%;
+    
+    min-height: 100%;
+    
+    width: auto;
+    
+    height: auto;
+    
+    z-index: -1;
+
+}
+
+.container {
+    background-color: rgba(0,0,0,0.4);
+    padding:70px 70px 50px 70px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    outline: 2px solid white;
+            
+    animation: myanim 3s infinite;
+         
+}
+         
+@keyframes myanim {
+            
+ 50% {
+               
+ outline-color:purple;
+            
+}
+         
+}
+.title {
+    font-size: 2.5em;
+    margin: 0px 0px 40px 0px;
+}
+.title-highlight {
+    color: #00f; /* Highlight color */
+    animation: text-glow 2s ease-in-out infinite alternate;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    color: #aaa;
+}
+
+.input-container input {
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    width:90%;
+}
+
+.input-container input:focus + label,
+.input-container input:valid + label {
+    transform: translateY(-110%) scale(0.8);
+    font-size: 1em;
+    color: #fff;
+}
+::-ms-input-container placeholder{
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+.login-btn {
+    background-color: #fff;
+    color: #000;
+    padding:15px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width:100px;
+    margin:auto;
+    margin-top:30px;
+}
+
+.login-btn:hover {
+    background-color: #ddd;
+}
+
+.animated-user {
+  animation: user-wave 2s ease-in-out infinite;
+  width:200px;
+}
+
+@keyframes user-wave {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.man1{
+  display:inline-block;
+  position:absolute;
+  left:100px;
+}
+.man2{
+  display:inline-block;
+  position:absolute;
+  right:100px;
+}
